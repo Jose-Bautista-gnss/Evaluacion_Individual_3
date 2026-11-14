@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evaluacion Individual 3 | Analisis espacial LISA</title>
+<style>
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172438;
+  background: #f4f7fb;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+header {
+  background: #102b4e;
+  color: white;
+  padding: 70px 24px;
+  text-align: center;
+}
+header h1 { font-size: 36px; margin-bottom: 12px; }
+header p { color: #d8e5f2; line-height: 1.7; }
+main { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+section {
+  background: white;
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 22px;
+  box-shadow: 0 3px 18px #102b4e12;
+}
+h2 { color: #173d68; }
+p, li { line-height: 1.8; }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+}
+.card { padding: 18px; border: 1px solid #dce5ee; border-radius: 9px; }
+.card h3 { color: #173d68; }
+a.boton {
+  display: inline-block;
+  background: #174d80;
+  color: white;
+  padding: 13px 19px;
+  border-radius: 7px;
+  text-decoration: none;
+  margin: 8px 8px 0 0;
+}
+a.boton:hover { background: #0e3152; }
+footer { text-align: center; padding: 28px; color: #617185; }
+</style>
+</head>
+<body>
+<header>
+<h1>Evaluacion Individual 3</h1>
+<p>Introduccion a la Ciencia de Datos Espaciales</p>
+<p>Analisis de vecindad y autocorrelacion espacial LISA</p>
+</header>
+
+<main>
+<section>
+<h2>Descripcion del estudio</h2>
+<p>
+Se analiza la distribucion espacial del porcentaje de poblacion
+que completo la educacion secundaria en los distritos de
+Cajamarca, Amazonas y San Martin.
+</p>
+<p>
+El estudio utiliza GeoPandas, libpysal y esda para construir
+relaciones de vecindad, calcular el indice I de Moran
+y clasificar las asociaciones espaciales locales.
+</p>
+</section>
+
+<section>
+<h2>Metodos de vecindad</h2>
+<div class="cards">
+<div class="card">
+<h3>Rook</h3>
+<p>Vecindad definida por fronteras compartidas.</p>
+</div>
+<div class="card">
+<h3>Queen</h3>
+<p>Vecindad definida por fronteras o vertices compartidos.</p>
+</div>
+<div class="card">
+<h3>KNN</h3>
+<p>Vecindad basada en los vecinos mas proximos.</p>
+</div>
+<div class="card">
+<h3>Banda de distancia</h3>
+<p>Vecindad definida mediante un umbral de distancia.</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Clasificacion LISA</h2>
+<p>
+El analisis identifica agrupamientos High-High (hotSpot),
+Low-Low (coldSpot), valores atipicos High-Low (hotOutlier)
+y Low-High (coldOutlier), ademas de asociaciones
+estadisticamente no significativas.
+</p>
+<p>
+Los cuatro mapas y las tablas de resultados se generan
+al ejecutar el cuaderno Jupyter.
+</p>
+</section>
+
+<section>
+<h2>Cuaderno y codigo fuente</h2>
+<p>
+El cuaderno contiene la metodologia, las operaciones espaciales,
+el analisis estadistico y la generacion de los mapas.
+</p>
+<a class="boton" href="https://colab.research.google.com/github/Jose-Bautista-gnss/Evaluacion_Individual_3/blob/main/Tarea_individual_3.ipynb" target="_blank" rel="noopener">
+Abrir en Google Colab
+</a>
+<a class="boton" href="https://github.com/Jose-Bautista-gnss/Evaluacion_Individual_3/blob/main/Tarea_individual_3.ipynb" target="_blank" rel="noopener">
+Ver cuaderno en GitHub
+</a>
+</section>
+</main>
+
+<footer>
+Jose Armando Bautista Janampa | Evaluacion Individual 3
+</footer>
+</body>
+</html>
